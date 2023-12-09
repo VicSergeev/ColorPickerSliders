@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18AA9DE92B24E2DB0065EF0D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA9DE82B24E2DB0065EF0D /* MainViewController.swift */; };
 		18CC3E912B0A022F001BAE03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CC3E902B0A022F001BAE03 /* AppDelegate.swift */; };
 		18CC3E932B0A022F001BAE03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CC3E922B0A022F001BAE03 /* SceneDelegate.swift */; };
 		18CC3E952B0A022F001BAE03 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CC3E942B0A022F001BAE03 /* ColorPickerViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18AA9DE82B24E2DB0065EF0D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		18CC3E8D2B0A022F001BAE03 /* ColorPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18CC3E902B0A022F001BAE03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18CC3E922B0A022F001BAE03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +49,24 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		18AA9DE62B24E2050065EF0D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				18CC3E962B0A022F001BAE03 /* Main.storyboard */,
+				18CC3E9B2B0A0231001BAE03 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		18AA9DE72B24E2250065EF0D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				18CC3E942B0A022F001BAE03 /* ColorPickerViewController.swift */,
+				18AA9DE82B24E2DB0065EF0D /* MainViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		18CC3E842B0A022F001BAE03 = {
 			isa = PBXGroup;
 			children = (
@@ -66,11 +86,10 @@
 		18CC3E8F2B0A022F001BAE03 /* ColorPicker */ = {
 			isa = PBXGroup;
 			children = (
+				18AA9DE72B24E2250065EF0D /* View Controllers */,
 				18AA9DE52B24E1A20065EF0D /* App */,
-				18CC3E942B0A022F001BAE03 /* ColorPickerViewController.swift */,
-				18CC3E962B0A022F001BAE03 /* Main.storyboard */,
+				18AA9DE62B24E2050065EF0D /* Storyboards */,
 				18CC3E992B0A0231001BAE03 /* Assets.xcassets */,
-				18CC3E9B2B0A0231001BAE03 /* LaunchScreen.storyboard */,
 			);
 			path = ColorPicker;
 			sourceTree = "<group>";
@@ -149,6 +168,7 @@
 				18CC3E952B0A022F001BAE03 /* ColorPickerViewController.swift in Sources */,
 				18CC3E912B0A022F001BAE03 /* AppDelegate.swift in Sources */,
 				18CC3E932B0A022F001BAE03 /* SceneDelegate.swift in Sources */,
+				18AA9DE92B24E2DB0065EF0D /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
