@@ -5,7 +5,7 @@
 //  Created by Vic on 09.12.2023.
 //
 
-import CoreFoundation
+import Foundation
 
 struct BGColor {
     var red: Float

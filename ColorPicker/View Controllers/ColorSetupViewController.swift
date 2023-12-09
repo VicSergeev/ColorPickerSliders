@@ -21,7 +21,7 @@ final class ColorSetupViewController: UIViewController {
     
     weak var delegate: ColorSetupViewControllerDelegate?
     
-    private var color = BGColor(red: 0, green: 0, blue: 0, alpha: 0)
+    private var color = BGColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,14 +42,18 @@ final class ColorSetupViewController: UIViewController {
         switch sender {
         case redSlider:
             redLabel.text = String(format: "%.2f", redSlider.value)
+            color.red = sender.value
         case greenSlider:
             greenLabel.text = String(format: "%.2f", greenSlider.value)
+            color.green = sender.value
         default:
             blueLabel.text = String(format: "%.2f", blueSlider.value)
+            color.green = sender.value
         }
     }
     
     @IBAction func doneButtonAction(_ sender: UIButton) {
+        delegate?.getValues(from: color)
         dismiss(animated: true)
     }
     
