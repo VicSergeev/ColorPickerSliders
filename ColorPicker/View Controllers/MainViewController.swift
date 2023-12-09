@@ -13,10 +13,13 @@ protocol ColorSetupViewControllerDelegate: AnyObject {
 
 final class MainViewController: UIViewController {
     
+    private var colors = BGColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let colorSetupVC = segue.destination as? ColorSetupViewController
-        
         colorSetupVC?.delegate = self
+        
+        
     }
     
     override func viewDidLoad() {
@@ -29,8 +32,18 @@ final class MainViewController: UIViewController {
 // MARK: - ColorSetupViewControllerDelegate
 extension MainViewController: ColorSetupViewControllerDelegate {
     func getValues(from color: BGColor) {
+        colors = color
+        getColors()
+    }
+}
+
+extension MainViewController {
+    private func getColors() {
         view.backgroundColor = UIColor(
-            red: CGFloat(color.red), green: CGFloat(color.green), blue: CGFloat(color.blue), alpha: CGFloat(color.alpha)
+            red: CGFloat(colors.red),
+            green: CGFloat(colors.green),
+            blue: CGFloat(colors.blue),
+            alpha: CGFloat(colors.alpha)
         )
     }
 }
