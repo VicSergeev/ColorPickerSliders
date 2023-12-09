@@ -13,26 +13,28 @@ protocol ColorSetupViewControllerDelegate: AnyObject {
 
 final class MainViewController: UIViewController {
     
-    private var colors = BGColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
+    var palette = BGColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let colorSetupVC = segue.destination as? ColorSetupViewController
         colorSetupVC?.delegate = self
         
+        let navigationVC = segue.source as? UINavigationController
+        let mainVC = navigationVC?.topViewController as? MainViewController
+        
+        colorSetupVC?.red = mainVC?.palette.red ?? 0.0
+        colorSetupVC?.green = mainVC?.palette.green ?? 0.0
+        colorSetupVC?.blue = mainVC?.palette.blue ?? 0.0
+        colorSetupVC?.alpha = mainVC?.palette.alpha ?? 0.0
         
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
 
 }
 
 // MARK: - ColorSetupViewControllerDelegate
 extension MainViewController: ColorSetupViewControllerDelegate {
     func getValues(from color: BGColor) {
-        colors = color
+        palette = color
         getColors()
     }
 }
@@ -40,10 +42,10 @@ extension MainViewController: ColorSetupViewControllerDelegate {
 extension MainViewController {
     private func getColors() {
         view.backgroundColor = UIColor(
-            red: CGFloat(colors.red),
-            green: CGFloat(colors.green),
-            blue: CGFloat(colors.blue),
-            alpha: CGFloat(colors.alpha)
+            red: CGFloat(palette.red),
+            green: CGFloat(palette.green),
+            blue: CGFloat(palette.blue),
+            alpha: CGFloat(palette.alpha)
         )
     }
 }

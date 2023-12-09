@@ -21,7 +21,11 @@ final class ColorSetupViewController: UIViewController {
     
     weak var delegate: ColorSetupViewControllerDelegate?
     
-    private var color = BGColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
+    var color = BGColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
+    var red: Float!
+    var green: Float!
+    var blue: Float!
+    var alpha: Float!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +38,11 @@ final class ColorSetupViewController: UIViewController {
         greenLabel.text = string(from: greenSlider)
         blueLabel.text = string(from: blueSlider)
         
+        red = 0.0
+        green = 0.0
+        blue = 0.0
+        alpha = 1.0
+        
     }
     
     @IBAction func sliderAction(_ sender: UISlider) {
@@ -43,17 +52,12 @@ final class ColorSetupViewController: UIViewController {
         case redSlider:
             redLabel.text = String(format: "%.2f", redSlider.value)
             color.red = sender.value
-            print("\(color.red)")
         case greenSlider:
             greenLabel.text = String(format: "%.2f", greenSlider.value)
             color.green = sender.value
-            print("\(color.green)")
-        case blueSlider:
+        default :
             blueLabel.text = String(format: "%.2f", blueSlider.value)
             color.blue = blueSlider.value
-            print("\(color.blue)")
-        default:
-            break
         }
     }
     
@@ -83,3 +87,14 @@ final class ColorSetupViewController: UIViewController {
     }
 }
 
+//extension ColorSetupViewController {
+//    private func setValues() {
+//        redLabel.text = String(color.red)
+//        greenLabel.text = String(color.green)
+//        blueLabel.text = String(color.blue)
+//        
+//        redSlider.value = color.red
+//        greenSlider.value = color.green
+//        blueSlider.value = color.blue
+//    }
+//}

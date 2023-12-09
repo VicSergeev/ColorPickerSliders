@@ -144,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lzT-9M-ngf" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5177" y="825"/>
+            <point key="canvasLocation" x="4665" y="843"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="hSx-4V-tTE">
@@ -159,7 +159,7 @@
                     <navigationItem key="navigationItem" id="J77-3S-ITY">
                         <barButtonItem key="rightBarButtonItem" image="square.and.pencil" catalog="system" id="xg8-VM-z9r">
                             <connections>
-                                <segue destination="kIv-nL-pbN" kind="presentation" modalPresentationStyle="fullScreen" id="vfh-8C-CxC"/>
+                                <segue destination="kIv-nL-pbN" kind="presentation" identifier="toColorSet" modalPresentationStyle="fullScreen" id="vfh-8C-CxC"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
