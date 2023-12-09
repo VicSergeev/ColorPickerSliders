@@ -26,6 +26,7 @@ final class MainViewController: UIViewController {
 
 }
 
+// MARK: - ColorSetupViewControllerDelegate
 extension MainViewController: ColorSetupViewControllerDelegate {
     func getValues(from color: BGColor) {
         view.backgroundColor = UIColor(
