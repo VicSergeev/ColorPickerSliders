@@ -74,10 +74,3 @@ final class ColorSetupViewController: UIViewController {
     }
 }
 
-extension ColorSetupViewController {
-    private func collectColors() {
-        if let red = redSlider {
-            color.red = red.value
-        }
-    }
-}
