@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class ColorPickerViewController: UIViewController {
     
     // MARK: Sliders outlets
     @IBOutlet var redSlider: UISlider!
@@ -24,8 +24,6 @@ final class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupLabels()
         setupSliders()
     }
     

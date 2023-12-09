@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		18CC3E912B0A022F001BAE03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CC3E902B0A022F001BAE03 /* AppDelegate.swift */; };
 		18CC3E932B0A022F001BAE03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CC3E922B0A022F001BAE03 /* SceneDelegate.swift */; };
-		18CC3E952B0A022F001BAE03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CC3E942B0A022F001BAE03 /* ViewController.swift */; };
+		18CC3E952B0A022F001BAE03 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CC3E942B0A022F001BAE03 /* ColorPickerViewController.swift */; };
 		18CC3E982B0A022F001BAE03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CC3E962B0A022F001BAE03 /* Main.storyboard */; };
 		18CC3E9A2B0A0231001BAE03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18CC3E992B0A0231001BAE03 /* Assets.xcassets */; };
 		18CC3E9D2B0A0231001BAE03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CC3E9B2B0A0231001BAE03 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		18CC3E8D2B0A022F001BAE03 /* ColorPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18CC3E902B0A022F001BAE03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18CC3E922B0A022F001BAE03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		18CC3E942B0A022F001BAE03 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		18CC3E942B0A022F001BAE03 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
 		18CC3E972B0A022F001BAE03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18CC3E992B0A0231001BAE03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18CC3E9C2B0A0231001BAE03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +37,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18AA9DE52B24E1A20065EF0D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				18CC3E902B0A022F001BAE03 /* AppDelegate.swift */,
+				18CC3E922B0A022F001BAE03 /* SceneDelegate.swift */,
+				18CC3E9E2B0A0231001BAE03 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		18CC3E842B0A022F001BAE03 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +66,11 @@
 		18CC3E8F2B0A022F001BAE03 /* ColorPicker */ = {
 			isa = PBXGroup;
 			children = (
-				18CC3E902B0A022F001BAE03 /* AppDelegate.swift */,
-				18CC3E922B0A022F001BAE03 /* SceneDelegate.swift */,
-				18CC3E942B0A022F001BAE03 /* ViewController.swift */,
+				18AA9DE52B24E1A20065EF0D /* App */,
+				18CC3E942B0A022F001BAE03 /* ColorPickerViewController.swift */,
 				18CC3E962B0A022F001BAE03 /* Main.storyboard */,
 				18CC3E992B0A0231001BAE03 /* Assets.xcassets */,
 				18CC3E9B2B0A0231001BAE03 /* LaunchScreen.storyboard */,
-				18CC3E9E2B0A0231001BAE03 /* Info.plist */,
 			);
 			path = ColorPicker;
 			sourceTree = "<group>";
@@ -138,7 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18CC3E952B0A022F001BAE03 /* ViewController.swift in Sources */,
+				18CC3E952B0A022F001BAE03 /* ColorPickerViewController.swift in Sources */,
 				18CC3E912B0A022F001BAE03 /* AppDelegate.swift in Sources */,
 				18CC3E932B0A022F001BAE03 /* SceneDelegate.swift in Sources */,
 			);
@@ -294,7 +302,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MF7QC2JX3N;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ColorPicker/Info.plist;
+				INFOPLIST_FILE = ColorPicker/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -325,7 +333,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MF7QC2JX3N;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ColorPicker/Info.plist;
+				INFOPLIST_FILE = ColorPicker/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
