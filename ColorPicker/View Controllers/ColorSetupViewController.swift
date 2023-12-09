@@ -26,9 +26,9 @@ final class ColorSetupViewController: UIViewController {
         
         setColor()
         
-        redLabel.text = String(format: "%.2f", redSlider.value)
-        greenLabel.text = String(format: "%.2f", greenSlider.value)
-        blueLabel.text = String(format: "%.2f", blueSlider.value)
+        redLabel.text = string(from: redSlider)
+        greenLabel.text = string(from: greenSlider)
+        blueLabel.text = string(from: blueSlider)
         
     }
     
@@ -54,5 +54,8 @@ final class ColorSetupViewController: UIViewController {
         )
     }
     
+    private func string(from slider: UISlider) -> String {
+        String(format: "%.2f", slider.value)
+    }
     
 }
