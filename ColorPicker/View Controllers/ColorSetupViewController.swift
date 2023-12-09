@@ -19,12 +19,16 @@ final class ColorSetupViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
+    weak var delegate: ColorSetupViewControllerDelegate?
+    
+    private var color = BGColor(red: 0, green: 0, blue: 0, alpha: 0)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         colorView.layer.cornerRadius = 15
         
         setColor()
+        setupSliderTrack()
         
         redLabel.text = string(from: redSlider)
         greenLabel.text = string(from: greenSlider)
@@ -45,6 +49,11 @@ final class ColorSetupViewController: UIViewController {
         }
     }
     
+    @IBAction func doneButtonAction(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
+    
+    
     private func setColor() {
         colorView.backgroundColor = UIColor(
             red: CGFloat(redSlider.value),
@@ -58,4 +67,17 @@ final class ColorSetupViewController: UIViewController {
         String(format: "%.2f", slider.value)
     }
     
+    private func setupSliderTrack() {
+        redSlider.minimumTrackTintColor = .red
+        greenSlider.minimumTrackTintColor = .green
+        blueSlider.minimumTrackTintColor = .blue
+    }
+}
+
+extension ColorSetupViewController {
+    private func collectColors() {
+        if let red = redSlider {
+            color.red = red.value
+        }
+    }
 }
