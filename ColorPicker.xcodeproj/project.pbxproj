@@ -96,8 +96,8 @@
 		18CC3E8F2B0A022F001BAE03 /* ColorPicker */ = {
 			isa = PBXGroup;
 			children = (
-				18AA9DEC2B24F4240065EF0D /* Models */,
 				18AA9DE72B24E2250065EF0D /* View Controllers */,
+				18AA9DEC2B24F4240065EF0D /* Models */,
 				18AA9DE52B24E1A20065EF0D /* App */,
 				18AA9DE62B24E2050065EF0D /* Storyboards */,
 				18CC3E992B0A0231001BAE03 /* Assets.xcassets */,
