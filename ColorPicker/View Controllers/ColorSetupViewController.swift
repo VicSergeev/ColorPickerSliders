@@ -22,10 +22,6 @@ final class ColorSetupViewController: UIViewController {
     weak var delegate: ColorSetupViewControllerDelegate?
     
     var color = BGColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
-    var red: Float!
-    var green: Float!
-    var blue: Float!
-    var alpha: Float!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,15 +30,14 @@ final class ColorSetupViewController: UIViewController {
         setColor()
         setupSliderTrack()
         
+        redSlider.value = 0.0
+        greenSlider.value = 0.0
+        blueSlider.value = 0.0
+        
         redLabel.text = string(from: redSlider)
         greenLabel.text = string(from: greenSlider)
         blueLabel.text = string(from: blueSlider)
-        
-        red = 0.0
-        green = 0.0
-        blue = 0.0
-        alpha = 1.0
-        
+
     }
     
     @IBAction func sliderAction(_ sender: UISlider) {
@@ -87,14 +82,14 @@ final class ColorSetupViewController: UIViewController {
     }
 }
 
-//extension ColorSetupViewController {
-//    private func setValues() {
-//        redLabel.text = String(color.red)
-//        greenLabel.text = String(color.green)
-//        blueLabel.text = String(color.blue)
-//        
-//        redSlider.value = color.red
-//        greenSlider.value = color.green
-//        blueSlider.value = color.blue
-//    }
-//}
+extension ColorSetupViewController {
+    func updateColor(red: Float?, green: Float?, blue: Float?) {
+        if let redColor = red {
+            redSlider.value = redColor
+        } else if let greenColor = green {
+            greenSlider.value = greenColor
+        } else if let blueColor = blue {
+            blueSlider.value = blueColor
+        }
+    }
+}

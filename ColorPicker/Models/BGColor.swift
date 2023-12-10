@@ -8,8 +8,8 @@
 import Foundation
 
 struct BGColor {
-    var red: Float
-    var green: Float
-    var blue: Float
-    var alpha: Float
+    var red: Float?
+    var green: Float?
+    var blue: Float?
+    var alpha: Float?
 }
