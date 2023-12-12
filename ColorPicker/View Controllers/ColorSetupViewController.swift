@@ -37,7 +37,6 @@ final class ColorSetupViewController: UIViewController {
         redLabel.text = string(from: redSlider)
         greenLabel.text = string(from: greenSlider)
         blueLabel.text = string(from: blueSlider)
-
     }
     
     @IBAction func sliderAction(_ sender: UISlider) {
